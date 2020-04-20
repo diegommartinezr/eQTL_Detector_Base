@@ -1,14 +1,9 @@
 FROM rocker/rstudio
 
 #Install R Packages
-RUN R -e "install.packages('glue')"
-RUN R -e "install.packages('knitr')"
-RUN R -e "install.packages('rmarkdown')"
-RUN R -e "install.packages('kableExtra')"
-RUN R -e "install.packages('devtools')"
-RUN R -e "install.packages('XML')"
-RUN R -e "install.packages('rlist')"
-RUN R -e "install.packages('readr')"
+
+RUN R -e 'install.packages(c("devtools", "optparse"), repos="http://cloud.r-project.org/"); \
+          source("https://bioconductor.org/biocLite.R")'
 
 #Install QTLtools
 
