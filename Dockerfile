@@ -1,18 +1,23 @@
 FROM rocker/rstudio
 
-#Install packages from sqtlseeker2
 
-RUN apt-get update --fix-missing -qq && apt-get install -y -q \
-    libssl-dev \
-    libcurl4-openssl-dev \
-    libnlopt-dev \
-    r-base \
-    procps \
-    && apt-get clean \
-    && apt-get purge \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apt-get update -qq && apt-get -y --no-install-recommends install \
+  libxml2-dev \
+  libcairo2-dev \
+  libsqlite-dev \
+  libmariadbd-dev \
+  libpq-dev \
+  libssh2-1-dev \
+  && install2.r --error \
+    --deps TRUE \
+    tidyverse \
+    dplyr \
+    ggplot2 \
+    devtools \
+    formatR \
+    remotes \
+    selectr
 
-RUN R -e 'install.packages("devtools", repos="http://cloud.r-project.org/")'
 
 
 #Install QTLtools
