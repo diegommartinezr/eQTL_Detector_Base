@@ -18,5 +18,20 @@ RUN cd /opt && \
 RUN apt-get update && apt-get install -y tabix
 RUN apt-get update && apt-get install -y bcftools
 
-#RUN apt-get update && apt-get install -y texlive-full 
 
+
+## install debian packages
+RUN apt-get update -qq && apt-get -y --no-install-recommends install \
+libxml2-dev \
+libcairo2-dev \
+libsqlite3-dev \
+libmariadbd-dev \
+libpq-dev \
+libssh2-1-dev \
+unixodbc-dev \
+libcurl4-openssl-dev \
+libssl-dev
+
+COPY Install.Packages.R /home/rstudio/Install.Packages.R
+
+RUN Rscript /home/rstudio/Install.Packages.R
