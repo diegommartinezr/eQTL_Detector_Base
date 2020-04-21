@@ -12,9 +12,7 @@ RUN apt-get update --fix-missing -qq && apt-get install -y -q \
     && apt-get purge \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN R -e 'install.packages(c("devtools", "optparse"), repos="http://cloud.r-project.org/"); \
-          source("https://bioconductor.org/biocLite.R"); \
-          devtools::install_github("dgarrimar/sQTLseekeR2")'
+RUN R -e 'install.packages("devtools", repos="http://cloud.r-project.org/")'
 
 
 #Install QTLtools
