@@ -7,4 +7,5 @@ install.packages("rlist")
 install.packages("bedr")
 library(devtools)
 
+
 devtools::install_github("haozhu233/kableExtra")
