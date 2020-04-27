@@ -43,3 +43,5 @@ RUN ln -snf /usr/share/zoneinfo/Etc/UTC /etc/localtime \
     && apt-get upgrade -y \
     && apt-get install texlive-latex-base texlive-latex-extra texlive-fonts-recommended xzdec -y \
     && rm -rf /var/lib/apt/lists/*
+    
+RUN apt-get update && (apt-get install -t buster-backports -y bcftools || apt-get install -y bcftools) && apt-get clean && apt-get purge && rm -rf /var/lib/apt/lists/* /tmp/*
