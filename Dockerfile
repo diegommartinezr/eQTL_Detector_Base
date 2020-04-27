@@ -1,7 +1,7 @@
 FROM rocker/rstudio
 
 #Install QTLtools
-
+RUN apt-get update && apt-get install -y less
 RUN apt-get update && apt-get install -y qtltools
 RUN apt-get update && apt-get install -y wget
 
