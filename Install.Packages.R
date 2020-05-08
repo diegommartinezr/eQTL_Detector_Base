@@ -6,7 +6,11 @@ install.packages("readr")
 install.packages("rlist")
 install.packages("bedr")
 install.packages("plink")
-library(devtools)
+install.packages("gghighlight")
+install.packages("fs")
+install.packages("backports")
 
+library(devtools)
+gghighlight
 
 devtools::install_github("haozhu233/kableExtra")
