@@ -7,5 +7,8 @@ install.packages("rlist")
 install.packages("bedr")
 install.packages("plink")
 
+install.packages("kableExtra")
+install.packages("gghighlight")
+
 library(devtools)
 devtools::install_github("haozhu233/kableExtra")
