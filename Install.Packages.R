@@ -8,6 +8,4 @@ install.packages("bedr")
 install.packages("plink")
 
 library(devtools)
-gghighlight
-
 devtools::install_github("haozhu233/kableExtra")
