@@ -6,9 +6,6 @@ install.packages("readr")
 install.packages("rlist")
 install.packages("bedr")
 install.packages("plink")
-install.packages("gghighlight")
-install.packages("fs")
-install.packages("backports")
 
 library(devtools)
 gghighlight
