@@ -12,3 +12,8 @@ install.packages("gghighlight")
 
 library(devtools)
 devtools::install_github("haozhu233/kableExtra")
+
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("qvalue")
