@@ -17,7 +17,7 @@ RUN cd /opt && \
 
 RUN apt-get update && apt-get install -y tabix
 RUN apt-get update && apt-get install -y bcftools
-
+RUN apt-get update && apt-get install -y bedtools
 
 
 ## install debian packages
