@@ -18,3 +18,4 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 
 BiocManager::install("qvalue")
 BiocManager::install("fgsea")
+BiocManager::install("eQTL")
