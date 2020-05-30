@@ -6,6 +6,7 @@ install.packages("readr")
 install.packages("rlist")
 install.packages("bedr")
 install.packages("plink")
+install.packages("qqman")
 
 install.packages("kableExtra")
 install.packages("gghighlight")
