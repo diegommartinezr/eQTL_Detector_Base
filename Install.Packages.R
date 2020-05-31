@@ -7,6 +7,7 @@ install.packages("rlist")
 install.packages("bedr")
 install.packages("plink")
 install.packages("qqman")
+install.packages("vcfR")
 
 install.packages("kableExtra")
 install.packages("gghighlight")
