@@ -18,6 +18,7 @@ RUN cd /opt && \
 RUN apt-get update && apt-get install -y tabix
 RUN apt-get update && apt-get install -y bcftools
 RUN apt-get update && apt-get install -y bedtools
+RUN apt-get update && apt-get install -y libgsl-dev
 
 
 ## install debian packages
@@ -45,3 +46,9 @@ RUN ln -snf /usr/share/zoneinfo/Etc/UTC /etc/localtime \
     && rm -rf /var/lib/apt/lists/*
     
 RUN apt-get update && (apt-get install -t buster-backports -y bcftools || apt-get install -y bcftools) && apt-get clean && apt-get purge && rm -rf /var/lib/apt/lists/* /tmp/*
+
+RUN mkdir caviar
+RUN cd caviar
+RUN git clone https://github.com/fhormoz/caviar.git
+RUN cd caviar/CAVIAR-C++/
+RUN make
