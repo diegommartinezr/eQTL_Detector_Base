@@ -52,3 +52,4 @@ RUN cd caviar
 RUN git clone https://github.com/fhormoz/caviar.git
 RUN cd caviar/CAVIAR-C++/
 RUN make
+RUN cp *CAVIAR ~/apps/caviar
