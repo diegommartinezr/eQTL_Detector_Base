@@ -47,9 +47,3 @@ RUN ln -snf /usr/share/zoneinfo/Etc/UTC /etc/localtime \
     
 RUN apt-get update && (apt-get install -t buster-backports -y bcftools || apt-get install -y bcftools) && apt-get clean && apt-get purge && rm -rf /var/lib/apt/lists/* /tmp/*
 
-RUN mkdir caviar
-RUN cd caviar
-RUN git clone https://github.com/fhormoz/caviar.git
-RUN cd caviar/CAVIAR-C++/
-RUN make
-RUN cp *CAVIAR ~/apps/caviar
